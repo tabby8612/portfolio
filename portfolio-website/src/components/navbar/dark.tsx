@@ -5,6 +5,7 @@ export default function Dark() {
 
   function changeState() {
     document.body.classList.toggle("dark");
+    // document.body.style.backgroundColor = darkmode ? "black" : "white";
     setDarkMode(!darkmode);
   }
 

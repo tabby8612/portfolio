@@ -6,7 +6,7 @@ import SocialIcons from "./navbar/socialIcons";
 export default function NavBar() {
   return (
     <>
-      <div className="w-screen h-16 flex justify-between px-5">
+      <div className="h-16 flex justify-between px-5 sticky top-0 z-50 bg-white dark:bg-black">
         <Logo />
         <Navigation />
         <SocialIcons />
