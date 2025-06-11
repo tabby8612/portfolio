@@ -1,37 +1,52 @@
-import StellarImage from "../../assets/images/projects/stellarmart.jpg";
+type Props = {
+  image: string;
+  title: string;
+  description: string;
+  tech: string;
+  stack: string;
+  livePreview?: string;
+  githublink: string;
+};
 
-export default function Card() {
+export default function Card({ image, title, description, tech, stack, livePreview, githublink }: Props) {
   return (
     <div className="w-[430px] rounded-lg shadow-2xl mb-6 dark:shadow-amber-50/40">
       <img
-        src={StellarImage}
-        alt="Stellar Image"
-        className="rounded-t-xl"
+        src={image}
+        alt={title}
+        className="rounded-t-xl h-60 w-full"
       />
       <div className="p-3">
-        <h1 className="text-lg font-bold mb-3">Stellmart - Ecommerce Website</h1>
-        <p className="mb-3 dark:text-stone-400">
-          A full-fledged full-stack e-commerce application with integrated online payment functionality, enabling users to search, save, filter, and purchase products. Users can also manage their profiles and track their orders and purchases.
-          Additionally, implement an admin dashboard to add and track overall products and product sales on the website and manage orders and users.
+        <h1 className="text-lg font-bold mb-3">{title}</h1>
+        <p className="mb-3 dark:text-stone-400">{description}</p>
+        <p className="dark:text-stone-400">
+          <strong className="dark:text-white">Tech: </strong> {tech}
         </p>
         <p className="dark:text-stone-400">
-          <strong className="dark:text-white">Tech: </strong> HTML, CSS, JS, TS, React.js, Node.js, Express.js
+          <strong className="dark:text-white">Stack: </strong> {stack}
         </p>
-        <p className="dark:text-stone-400">
-          <strong className="dark:text-white">Stack: </strong> React, Typescript, Laravel, MySQL
-        </p>
-        <div className="flex justify-around my-4">
-          <a
-            href=""
-            className="font-semibold underline">
-            Live Preview
-          </a>
-          <a
-            href=""
-            className="font-semibold underline">
-            View Code
-          </a>
-        </div>
+        {livePreview ? (
+          <div className="flex justify-around my-4">
+            <a
+              href={livePreview}
+              className="font-semibold underline">
+              Live Preview
+            </a>
+            <a
+              href={githublink}
+              className="font-semibold underline">
+              View Code
+            </a>
+          </div>
+        ) : (
+          <div className="flex justify-around items-center my-4">
+            <a
+              href={githublink}
+              className="font-semibold underline">
+              View Code
+            </a>
+          </div>
+        )}
       </div>
     </div>
   );

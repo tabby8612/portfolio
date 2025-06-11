@@ -1,6 +1,7 @@
 import handicon from "../assets/images/handIcon.png";
 import HeroBanner from "../assets/images/hero-banner.jpg";
 import RotateImage from "../assets/images/rotate-image-final.png";
+import ResumePDF from "../assets/Tabish CV 11-Jun.pdf";
 
 import { CupStarBold } from "./UI/Cup";
 import { ExternalLink } from "./UI/ExternalLink";
@@ -23,9 +24,13 @@ export default function Hero() {
         <p className="bg-clip-text pb-9 font-bold bg-gradient-to-r from-purple-500 to-pink-700 text-transparent">Tabish Sajwani</p>
         <p className="pb-4 font-bold">I build things for web</p>
         <p className="pb-4 font-bold">and mobile</p>
-        <button className="py-2 px-15 bg-blue-600 text-lg text-white rounded-lg flex justify-center items-center gap-3">
-          Resume <ExternalLink />{" "}
-        </button>
+        <a
+          href={ResumePDF}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="py-2 px-15 bg-blue-600 text-lg text-white rounded-lg flex justify-center items-center gap-3 w-64">
+          Resume <ExternalLink />
+        </a>
       </div>
       <div
         id="intro-image"
