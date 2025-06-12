@@ -20,7 +20,7 @@ Built using **React** and **TypeScript**, it's a modern, responsive, and fast st
 
 ## 📸 Preview
 
-![Screenshot of the portfolio website](./assets/screenshot.jpg)
+![Screenshot of the portfolio website](portfolio-website/src/assets/screenshot.jpg)
 
 ## 🛠️ Setup & Development
 
